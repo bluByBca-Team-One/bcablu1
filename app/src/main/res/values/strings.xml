@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BluLoginDemo</string>
+    <string name="blu_logo_text">blu</string>
+    <string name="username_hint">Username........</string>
+    <string name="password_hint">Password......</string>
+    <string name="btn_masuk">Masuk</string>
+    <string name="user_name">Gyvana Hafizhah Syan</string>
+    <string name="account_number">bluAccount - 123456789</string>
+    <string name="balance_hidden">Rp ●●●●●●●</string>
+    <string name="txt_pindah">Pindah Dana</string>
+    <string name="txt_qris">QRIS</string>
+    <string name="txt_transaksi_favorit">Transaksi Favorit</string>
+    <string name="txt_empty_fav">Kamu belum punya\nTransaksi Favorit</string>
+</resources>
