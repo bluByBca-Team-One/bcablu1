@@ -5,8 +5,8 @@
     android:layout_height="match_parent"
     android:background="#F5F7FA">
 
-    <!-- Status Bar Area (untuk waktu dan tanggal) -->
     <LinearLayout
+        android:id="@+id/statusBarArea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -31,13 +31,11 @@
             android:textSize="14sp" />
     </LinearLayout>
 
-    <!-- Header -->
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:layout_below="@id/tvDate"
-        android:background="#00A5B5">
+        android:layout_below="@id/statusBarArea" android:background="#00A5B5">
 
         <ImageView
             android:id="@+id/btnBack"
@@ -46,20 +44,17 @@
             android:layout_marginStart="18dp"
             android:layout_marginTop="40dp"
             android:src="@drawable/ic_back"
-            android:tint="#FFFFFF" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:text="Riwayat Transaksi"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            app:tint="#FFFFFF" /> <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Riwayat Transaksi"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
     </RelativeLayout>
 
-    <!-- Search Bar -->
     <LinearLayout
         android:id="@+id/searchBar"
         android:layout_width="match_parent"
@@ -77,21 +72,18 @@
             android:layout_height="24dp"
             android:layout_marginEnd="8dp"
             android:src="@drawable/ic_search"
-            android:tint="#666666" />
-
-        <EditText
-            android:id="@+id/etSearch"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@null"
-            android:hint="Search"
-            android:padding="4dp"
-            android:textColor="#000000"
-            android:textSize="14sp" />
+            app:tint="#666666" /> <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@null"
+        android:hint="Search"
+        android:padding="4dp"
+        android:textColor="#000000"
+        android:textSize="14sp" />
     </LinearLayout>
 
-    <!-- Filter Section -->
     <LinearLayout
         android:id="@+id/filterSection"
         android:layout_width="match_parent"
@@ -109,10 +101,8 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <!-- Filter chips bisa ditambahkan di sini -->
     </LinearLayout>
 
-    <!-- List Transaksi -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
@@ -128,7 +118,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Transaksi 1: Top Up Gopay -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -147,30 +136,28 @@
                         android:layout_height="40dp"
                         android:layout_marginEnd="12dp"
                         android:src="@drawable/ic_wallet"
-                        android:tint="#00A5B5" />
+                        app:tint="#00A5B5" /> <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="0dp"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:text="Top Up Gopay"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Top Up Gopay"
-                            android:textColor="#000000"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Hari ini"
-                            android:textColor="#666666"
-                            android:textSize="14sp" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Hari ini"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+                </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -182,7 +169,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Transaksi 2: Gaji Bulanan -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -201,30 +187,28 @@
                         android:layout_height="40dp"
                         android:layout_marginEnd="12dp"
                         android:src="@drawable/ic_money"
-                        android:tint="#4CAF50" />
+                        app:tint="#4CAF50" /> <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="0dp"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:text="Gaji Bulanan"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Gaji Bulanan"
-                            android:textColor="#000000"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Hari ini"
-                            android:textColor="#666666"
-                            android:textSize="14sp" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Hari ini"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+                </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -236,7 +220,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Transaksi 3: Bayar Tagihan Listrik -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -255,30 +238,28 @@
                         android:layout_height="40dp"
                         android:layout_marginEnd="12dp"
                         android:src="@drawable/ic_electricity"
-                        android:tint="#FF9800" />
+                        app:tint="#FF9800" /> <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="0dp"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:text="Bayar Tagihan Listrik"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Bayar Tagihan Listrik"
-                            android:textColor="#000000"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="19 Nov 2025"
-                            android:textColor="#666666"
-                            android:textSize="14sp" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="19 Nov 2025"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+                </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -290,7 +271,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Transaksi 4: Transfer ke Ayah -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -308,30 +288,28 @@
                         android:layout_height="40dp"
                         android:layout_marginEnd="12dp"
                         android:src="@drawable/ic_transfer"
-                        android:tint="#2196F3" />
+                        app:tint="#2196F3" /> <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="0dp"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:text="Transfer ke Ayah"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Transfer ke Ayah"
-                            android:textColor="#000000"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="15 Nov 2025"
-                            android:textColor="#666666"
-                            android:textSize="14sp" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="15 Nov 2025"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
+                </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -346,7 +324,6 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <!-- Bottom Navigation Bar -->
     <androidx.cardview.widget.CardView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
@@ -378,8 +355,7 @@
                     android:layout_height="match_parent"
                     android:padding="16dp"
                     android:src="@drawable/ic_qr_code"
-                    android:tint="#00A5B5" />
-            </androidx.cardview.widget.CardView>
+                    app:tint="#00A5B5" /> </androidx.cardview.widget.CardView>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -402,10 +378,12 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:drawableTop="@drawable/ic_transaction"
-                        android:gravity="center"
+                        app:drawableTint="#FFFFFF" android:gravity="center"
                         android:text="Transaksi"
                         android:textColor="#FFFFFF"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"/>
 
                     <TextView
                         android:id="@+id/tabKeuangan"
@@ -413,10 +391,12 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:drawableTop="@drawable/ic_finance"
-                        android:gravity="center"
+                        app:drawableTint="#FFFFFF" android:gravity="center"
                         android:text="Keuangan"
                         android:textColor="#FFFFFF"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -441,10 +421,12 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:drawableTop="@drawable/ic_history_active"
-                        android:gravity="center"
+                        app:drawableTint="#FFFFFF" android:gravity="center"
                         android:text="Riwayat"
                         android:textColor="#FFFFFF"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"/>
 
                     <TextView
                         android:id="@+id/tabProfil"
@@ -452,10 +434,12 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:drawableTop="@drawable/ic_profile"
-                        android:gravity="center"
+                        app:drawableTint="#FFFFFF" android:gravity="center"
                         android:text="Profil"
                         android:textColor="#FFFFFF"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"/>
                 </LinearLayout>
             </LinearLayout>
 
