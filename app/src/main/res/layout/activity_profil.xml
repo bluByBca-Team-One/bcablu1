@@ -357,7 +357,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="16dp"
-                    android:src="@drawable/ic_qr_code"
+                    android:src="@drawable/logo5_foreground"
                     app:tint="#00A5B5"
                     android:contentDescription="QR Code"/>
             </androidx.cardview.widget.CardView>
@@ -424,24 +424,25 @@
 
                     <TextView
                         android:id="@+id/tabRiwayat"
-                        android:layout_width="0dp"
+                        android:layout_width="86dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawableTop="@drawable/ic_history" app:drawableTint="#FFFFFF"
+                        android:drawableTop="@drawable/logo1_foreground"
                         android:gravity="center"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"
                         android:text="Riwayat"
                         android:textColor="#FFFFFF"
                         android:textSize="10sp"
-                        android:minWidth="40dp"
-                        android:minHeight="40dp"/>
+                        app:drawableTint="#000000" />
 
                     <TextView
                         android:id="@+id/tabProfil"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawableTop="@drawable/ic_profile_active"
-                        app:drawableTint="#FFFFFF"
+                        android:drawableTop="@drawable/logo2_foreground"
+                        app:drawableTint="#000000"
                         android:gravity="center"
                         android:text="Profil"
                         android:textColor="#FFFFFF"
