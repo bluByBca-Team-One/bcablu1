@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="320dp"
         android:background="@color/blu_teal"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
 
     <LinearLayout
         android:id="@+id/topNavPill"

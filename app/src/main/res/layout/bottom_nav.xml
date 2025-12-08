@@ -103,7 +103,7 @@
             android:layout_height="match_parent"
             android:padding="16dp"
             android:src="@drawable/logo5_foreground"
-            app:tint="@color/blu_teal"/>
+            app:tint="@color/blu_teal" />
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
