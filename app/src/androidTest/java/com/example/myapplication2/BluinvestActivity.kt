@@ -10,8 +10,6 @@ class BluinvestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bluinvest)
 
-        findViewById<ImageView>(R.id.btnBack).setOnClickListener {
-            finish()
         }
     }
 }

@@ -10,9 +10,6 @@ class SavingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_saving)
 
-        // Back button dari header
-        findViewById<ImageView>(R.id.btnBack).setOnClickListener {
-            finish()
         }
     }
 }

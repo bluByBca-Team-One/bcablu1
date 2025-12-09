@@ -9,9 +9,6 @@ class KeuanganActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_keuangan_blu)
-
-        findViewById<ImageView>(R.id.btnBack).setOnClickListener {
-            finish()
         }
     }
 }
