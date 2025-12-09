@@ -11,4 +11,4 @@ class KeuanganActivity : AppCompatActivity() {
         setContentView(R.layout.layout_keuangan_blu)
         }
     }
-}
+

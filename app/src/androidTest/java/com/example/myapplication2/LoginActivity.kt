@@ -15,15 +15,13 @@ class LoginActivity : AppCompatActivity() {
 
         val etUsername = findViewById<EditText>(R.id.etUsername)
         val etPassword = findViewById<EditText>(R.id.etPassword)
-        val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val btnMasuk = findViewById<Button>(R.id.btnMasuk) // DIPERBAIKI
 
-        btnLogin.setOnClickListener {
+        btnMasuk.setOnClickListener {
             val username = etUsername.text.toString()
             val password = etPassword.text.toString()
 
-            // Validasi login (implementasi sesungguhnya di sini)
             if (username.isNotEmpty() && password.isNotEmpty()) {
-                // Login sukses -> MainActivity
                 val intent = Intent(this, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)

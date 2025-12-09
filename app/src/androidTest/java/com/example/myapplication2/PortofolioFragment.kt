@@ -1,30 +1,47 @@
 package com.example.bluapp.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.cardview.widget.CardView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.bluapp.BluinvestActivity
-import com.example.bluapp.InsuranceActivity
 import com.example.bluapp.R
 
 class PortfolioFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         val view = inflater.inflate(R.layout.fragment_portfolio, container, false)
 
-        // Card Investasi -> BluinvestActivity
-        view.findViewById<CardView>(R.id.cardInvestasi).setOnClickListener {
-            startActivity(Intent(requireContext(), BluinvestActivity::class.java))
+        // Tab navigation
+        view.findViewById<TextView>(R.id.tabTracker)?.setOnClickListener {
+            Toast.makeText(context, "Tracker", Toast.LENGTH_SHORT).show()
         }
 
-        // Card Insurance Portfolio
-        view.findViewById<CardView>(R.id.cardInsurancePortfolio).setOnClickListener {
-            startActivity(Intent(requireContext(), InsuranceActivity::class.java))
+        view.findViewById<TextView>(R.id.tabHome)?.setOnClickListener {
+            Toast.makeText(context, "Home", Toast.LENGTH_SHORT).show()
+        }
+
+        // Bottom navigation
+        view.findViewById<TextView>(R.id.navTransaksi)?.setOnClickListener {
+            Toast.makeText(context, "Transaksi", Toast.LENGTH_SHORT).show()
+        }
+
+        view.findViewById<TextView>(R.id.navKeuangan)?.setOnClickListener {
+            Toast.makeText(context, "Keuangan", Toast.LENGTH_SHORT).show()
+        }
+
+        view.findViewById<TextView>(R.id.navRiwayat)?.setOnClickListener {
+            Toast.makeText(context, "Riwayat", Toast.LENGTH_SHORT).show()
+        }
+
+        view.findViewById<TextView>(R.id.navProfil)?.setOnClickListener {
+            Toast.makeText(context, "Profil", Toast.LENGTH_SHORT).show()
         }
 
         return view

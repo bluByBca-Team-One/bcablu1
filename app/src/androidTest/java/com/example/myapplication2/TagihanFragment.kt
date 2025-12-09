@@ -24,3 +24,4 @@ class TagihanFragment : Fragment() {
         return view
     }
 }
+

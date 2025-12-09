@@ -11,4 +11,4 @@ class MetodePembayaranActivity : AppCompatActivity() {
         setContentView(R.layout.activity_metode_pembayaran)
         }
     }
-}
+
