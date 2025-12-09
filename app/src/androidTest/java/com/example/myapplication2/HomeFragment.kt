@@ -1,48 +1,37 @@
 package com.example.bluapp.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.cardview.widget.CardView
+import android.widget.Toast
+import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
-import com.example.bluapp.*
+import com.example.bluapp.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class HomeFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        // Saving Button
-        view.findViewById<CardView>(R.id.cardSaving).setOnClickListener {
-            startActivity(Intent(requireContext(), SavingActivity::class.java))
+        // Button Pindah Dana
+        view.findViewById<AppCompatButton>(R.id.btnPindahDana)?.setOnClickListener {
+            Toast.makeText(context, "Pindah Dana", Toast.LENGTH_SHORT).show()
         }
 
-        // Bluinvest Button
-        view.findViewById<CardView>(R.id.cardBluinvest).setOnClickListener {
-            startActivity(Intent(requireContext(), BluinvestActivity::class.java))
+        // Button QRIS
+        view.findViewById<AppCompatButton>(R.id.btnQris)?.setOnClickListener {
+            Toast.makeText(context, "QRIS", Toast.LENGTH_SHORT).show()
         }
 
-        // Insurance Button
-        view.findViewById<CardView>(R.id.cardInsurance).setOnClickListener {
-            startActivity(Intent(requireContext(), InsuranceActivity::class.java))
-        }
-
-        // Keuangan Button
-        view.findViewById<CardView>(R.id.cardKeuangan).setOnClickListener {
-            startActivity(Intent(requireContext(), KeuanganActivity::class.java))
-        }
-
-        // Transaksi Button
-        view.findViewById<CardView>(R.id.cardTransaksi).setOnClickListener {
-            startActivity(Intent(requireContext(), TransaksiActivity::class.java))
-        }
-
-        // Metode Pembayaran Button
-        view.findViewById<CardView>(R.id.cardMetodePembayaran).setOnClickListener {
-            startActivity(Intent(requireContext(), MetodePembayaranActivity::class.java))
+        // FAB (QR Code di tengah)
+        view.findViewById<FloatingActionButton>(R.id.fab)?.setOnClickListener {
+            Toast.makeText(context, "Scan QR", Toast.LENGTH_SHORT).show()
         }
 
         return view
